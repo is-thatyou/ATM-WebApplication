@@ -1,0 +1,21 @@
+		if("Balancejsp".equals(option))
+		{
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Credit.jsp");
+			session.setAttribute("ACCOUNTNO", MenuAccountNo);
+			dispatcher.forward(request, response);
+		}
+		else if("Depositjsp".equals(option))
+		{
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Balance.jsp");
+			session.setAttribute("ACCOUNTNO", MenuAccountNo);
+			dispatcher.forward(request, response);
+			
+		}
+		
+		else if("Withdrawjsp".equals(option))
+		{
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Debit.jsp");
+			session.setAttribute("ACCOUNTNO", MenuAccountNo);
+			dispatcher.forward(request, response);
+			
+		}
